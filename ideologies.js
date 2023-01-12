@@ -9,7 +9,7 @@ ideologies = [
         }
     },
     {
-        "name": "Libertarian Communism",
+        "name": "Libertarian Marxism",
         "stats": {
             "econ": 100,
             "dipl": 70,
@@ -197,8 +197,26 @@ ideologies = [
             "scty": 100
         }
     },
+     {
+        "name": "Left-Rothbardianism",
+        "stats": {
+            "econ": 35,
+            "dipl": 50,
+            "govt": 100,
+            "scty": 75
+        }
+    },
     {
         "name": "Anarcho-Mutualism",
+        "stats": {
+            "econ": 65,
+            "dipl": 50,
+            "govt": 100,
+            "scty": 70
+        }
+    },
+     {
+        "name": "Left Wing Market Anarchism",
         "stats": {
             "econ": 60,
             "dipl": 50,
