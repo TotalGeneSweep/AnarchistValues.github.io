@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
 <script>
-  version = "Test Edition #12" //Remember to update this before making changes to the test itself!
+  version = "Test Edition #14" //Remember to update this before making changes to the test itself!
 </script>
 </head>
 <script type="application/javascript"
@@ -122,8 +122,8 @@ stats"></a></div></noscript>
     setBarValue("collectivism", collectivism)
     setBarValue("individualism", individualism)
     setBarValue("nihilism", nihilism)
-    setBarValue("authority", existentialism)
-    setBarValue("progress", markets)
+    setBarValue("existentialism", existentialism)
+    setBarValue("markets", markets)
     setBarValue("communism", communism)
 
     document.getElementById("tech-label").innerHTML = setLabel(protech, techArray)
@@ -170,13 +170,13 @@ stats"></a></div></noscript>
         ctx.drawImage(img, 20, 290, 100, 100)
         img = document.getElementById("img-collectivism")
         ctx.drawImage(img, 680, 290, 100, 100)
-        img = document.getElementById("img-liberty")
+        img = document.getElementById("img-nihilism")
         ctx.drawImage(img, 20, 410, 100, 100)
-        img = document.getElementById("img-authority")
+        img = document.getElementById("img-existentialism")
         ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById("img-tradition")
+        img = document.getElementById("img-communism")
         ctx.drawImage(img, 20, 530, 100, 100)
-        img = document.getElementById("img-progress")
+        img = document.getElementById("img-markets")
         ctx.drawImage(img, 680, 530, 100, 100)
 
         ctx.fillStyle="#222222"
