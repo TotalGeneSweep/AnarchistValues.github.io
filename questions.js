@@ -8,6 +8,7 @@ questions = [
             "scty": 0
         }
     },
+    /*
     {
         "question": "It is necessary for the government to intervene in the economy to protect consumers.",
         "effect": {
@@ -630,3 +631,4 @@ questions = [
         }
     }
 ];
+/*
