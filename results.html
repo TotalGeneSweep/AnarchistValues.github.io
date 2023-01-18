@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
 <script>
-  version = "Test Edition #11" //Remember to update this before making changes to the test itself!
+  version = "Test Edition #12" //Remember to update this before making changes to the test itself!
 </script>
 </head>
 <script type="application/javascript"
@@ -40,12 +40,12 @@
     <div class="bar existentialism" id="bar-existentialism"><div class="text-wrapper" id="existentialism"></div></div>
     <img id="img-existentialism" src="value_images/unsad.svg" height="128pt"/>
 </div>
-<h2>Societal Axis: <span class="weight-300" id="society-label"></span></h2>
+<h2>Economy Axis: <span class="weight-300" id="econ-label"></span></h2>
 <div class="axis">
-    <img id="img-tradition" src="value_images/tradition.svg" height="128pt"/>
-    <div class="bar tradition" id="bar-tradition"><div class="text-wrapper" id="tradition"></div></div>
-    <div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress"></div></div>
-    <img id="img-progress" src="value_images/progress.svg" height="128pt"/>
+    <img id="img-communism" src="value_images/Ancom_flag.svg" height="128pt"/>
+    <div class="bar communism" id="bar-communism"><div class="text-wrapper" id="communism"></div></div>
+    <div class="bar markets" id="bar-markets"><div class="text-wrapper" id="markets"></div></div>
+    <img id="img-markets" src="value_images/Lwma_flag.svg" height="128pt"/>
 </div>
 <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
 <p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
@@ -94,7 +94,7 @@ stats"></a></div></noscript>
     techArray = ["Transhumanist","Futurist","Technological","Centrist","Agrarian","Primitive","Primal"]
     socArray = ["Egoist","Individualism","Selfish","Balanced","Selfless","Collectivist","Hive-Mind"]
     philArray = ["Nihilism","Cynicism","Skepticism","Moderate","Happy","Absurdism","Existentialism"]
-    sctyArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+    econArray = ["Free Markets","Mutualism","Trading","Neutral","Mutual Aid","Gift Economy","Communism"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -111,11 +111,11 @@ stats"></a></div></noscript>
     protech  = getQueryVariable("e")
     collectivism     = getQueryVariable("d")
     nihilism   = getQueryVariable("g")
-    progress  = getQueryVariable("s")
+    markets  = getQueryVariable("s")
     antitech   = (100 - protech).toFixed(1)
     individualism     = (100 - collectivism   ).toFixed(1)
     existentialism = (100 - nihilism ).toFixed(1)
-    tradition = (100 - progress).toFixed(1)
+    communism = (100 - markets).toFixed(1)
 
     setBarValue("protech", protech)
     setBarValue("antitech", antitech)
@@ -123,13 +123,13 @@ stats"></a></div></noscript>
     setBarValue("individualism", individualism)
     setBarValue("nihilism", nihilism)
     setBarValue("authority", existentialism)
-    setBarValue("progress", progress)
-    setBarValue("tradition", tradition)
+    setBarValue("progress", markets)
+    setBarValue("communism", communism)
 
     document.getElementById("tech-label").innerHTML = setLabel(protech, techArray)
     document.getElementById("societal-label").innerHTML = setLabel(collectivism, socArray)
     document.getElementById("phil-label").innerHTML = setLabel(nihilism, philArray)
-    document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
+    document.getElementById("econ-label").innerHTML = setLabel(markets, econArray)
 
     ideology = ""
     ideodist = Infinity
@@ -138,7 +138,7 @@ stats"></a></div></noscript>
         dist += Math.pow(Math.abs(ideologies[i].stats.econ - protech), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.govt - nihilism), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.dipl - collectivism), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.scty - markets), 1.73856063)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
@@ -197,9 +197,9 @@ stats"></a></div></noscript>
         ctx.fillStyle="#3f51b5"
         ctx.fillRect(682-5.6*existentialism, 424, 5.6*existentialism-2, 72)
         ctx.fillStyle="#8bc34a"
-        ctx.fillRect(120, 544, 5.6*tradition-2, 72)
+        ctx.fillRect(120, 544, 5.6*communism-2, 72)
         ctx.fillStyle="#9c27b0"
-        ctx.fillRect(682-5.6*progress, 544, 5.6*progress-2, 72)
+        ctx.fillRect(682-5.6*markets, 544, 5.6*markets-2, 72)
         ctx.fillStyle="#222222"
         ctx.font="700 80px Montserrat"
         ctx.textAlign="left"
@@ -211,12 +211,12 @@ stats"></a></div></noscript>
         if (protech  > 30) {ctx.fillText(protech + "%", 130, 237.5)}
         if (individualism     > 30) {ctx.fillText(individualism + "%", 130, 357.5)}
         if (nihilism   > 30) {ctx.fillText(nihilism + "%", 130, 477.5)}
-        if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
+        if (communism > 30) {ctx.fillText(communism + "%", 130, 597.5)}
         ctx.textAlign="right"
         if (antitech    > 30) {ctx.fillText(antitech + "%", 670, 237.5)}
         if (collectivism     > 30) {ctx.fillText(collectivism + "%", 670, 357.5)}
         if (existentialism > 30) {ctx.fillText(existentialism + "%", 670, 477.5)}
-        if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
+        if (markets  > 30) {ctx.fillText(markets + "%", 670, 597.5)}
 
         ctx.font="300 30px Montserrat"
         ctx.fillText("8values.github.io", 780, 60)
@@ -225,7 +225,7 @@ stats"></a></div></noscript>
         ctx.fillText("Technological Axis: " + document.getElementById("tech-label").innerHTML, 400, 175)
         ctx.fillText("Diplomatic Axis: " + document.getElementById("societal-label").innerHTML, 400, 295)
         ctx.fillText("Civil Axis: " + document.getElementById("phil-label").innerHTML, 400, 415)
-        ctx.fillText("Societal Axis: " + document.getElementById("society-label").innerHTML, 400, 535)
+        ctx.fillText("Societal Axis: " + document.getElementById("econ-label").innerHTML, 400, 535)
 
         document.getElementById("banner").src = c.toDataURL();
     }
