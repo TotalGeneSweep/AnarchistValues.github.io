@@ -19,7 +19,7 @@
 
 <h1>Results</h1>
 
-<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<h2>Tech Axis: <span class="weight-300" id="economic-label"></span></h2>
 <div class="axis">
     <img id="img-protech" src="value_images/Antrans_flag.svg" height="128pt"/>
     <div class="bar protech" id="bar-protech"><div class="text-wrapper" id="protech"></div></div>
@@ -91,7 +91,7 @@ stats"></a></div></noscript>
         }
     }
 
-    econArray = ["Transhumanist","Futurist","Technological","Centrist","Agrarian","Primitive","Primal"]
+    techArray = ["Transhumanist","Futurist","Technological","Centrist","Agrarian","Primitive","Primal"]
     diplArray = ["Cosmopolitan","Internationalist","Peaceful","Balanced","Patriotic","Nationalist","Chauvinist"]
     govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
     sctyArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
@@ -108,17 +108,17 @@ stats"></a></div></noscript>
         	{return ""}
     }
 
-    ProTech  = getQueryVariable("e")
+    proTech  = getQueryVariable("e")
     peace     = getQueryVariable("d")
     liberty   = getQueryVariable("g")
     progress  = getQueryVariable("s")
-    AntiTech   = (100 - ProTech).toFixed(1)
+    antiTech   = (100 - proTech).toFixed(1)
     might     = (100 - peace   ).toFixed(1)
     authority = (100 - liberty ).toFixed(1)
     tradition = (100 - progress).toFixed(1)
 
-    setBarValue("protech", ProTech)
-    setBarValue("antitech", AntiTech)
+    setBarValue("protech", proTech)
+    setBarValue("antitech", antiTech)
     setBarValue("peace", peace)
     setBarValue("might", might)
     setBarValue("liberty", liberty)
@@ -126,7 +126,7 @@ stats"></a></div></noscript>
     setBarValue("progress", progress)
     setBarValue("tradition", tradition)
 
-    document.getElementById("economic-label").innerHTML = setLabel(ProTech, econArray)
+    document.getElementById("economic-label").innerHTML = setLabel(proTech, techArray)
     document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
     document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
     document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
@@ -135,7 +135,7 @@ stats"></a></div></noscript>
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - ProTech), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.econ - proTech), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
         dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
@@ -185,9 +185,9 @@ stats"></a></div></noscript>
         ctx.fillRect(120, 420, 560, 80)
         ctx.fillRect(120, 540, 560, 80)
         ctx.fillStyle="#f44336"
-        ctx.fillRect(120, 184, 5.6*ProTech-2, 72)
+        ctx.fillRect(120, 184, 5.6*proTech-2, 72)
         ctx.fillStyle="#00897b"
-        ctx.fillRect(682-5.6*AntiTech, 184, 5.6*AntiTech-2, 72)
+        ctx.fillRect(682-5.6*antiTech, 184, 5.6*antiTech-2, 72)
         ctx.fillStyle="#ff9800"
         ctx.fillRect(120, 304, 5.6*might-2, 72)
         ctx.fillStyle="#03a9f4"
@@ -208,12 +208,12 @@ stats"></a></div></noscript>
         ctx.fillText(ideology, 20, 140)
 
         ctx.textAlign="left"
-        if (ProTech  > 30) {ctx.fillText(ProTech + "%", 130, 237.5)}
+        if (proTech  > 30) {ctx.fillText(proTech + "%", 130, 237.5)}
         if (might     > 30) {ctx.fillText(might + "%", 130, 357.5)}
         if (liberty   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
         if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
         ctx.textAlign="right"
-        if (AntiTech    > 30) {ctx.fillText(AntiTech + "%", 670, 237.5)}
+        if (antiTech    > 30) {ctx.fillText(antiTech + "%", 670, 237.5)}
         if (peace     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
         if (authority > 30) {ctx.fillText(authority + "%", 670, 477.5)}
         if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
