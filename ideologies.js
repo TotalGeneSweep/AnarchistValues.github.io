@@ -53,4 +53,31 @@ ideologies = [
             "econ": 40
         }
     },
+    {
+        "name": "Market Anarchism",
+        "stats": {
+            "tech": 60,
+            "soc": 45,
+            "phil": 55,
+            "econ": 90
+        }
+    },
+    {
+        "name": "Post-Left",
+        "stats": {
+            "tech": 55,
+            "soc": 35,
+            "phil": 45,
+            "econ": 45
+        }
+    },
+    {
+        "name": "Anarcho-Collectivism",
+        "stats": {
+            "tech": 55,
+            "soc": 75,
+            "phil": 45,
+            "econ": 20
+        }
+    },
 ];
