@@ -1,20 +1,11 @@
 questions = [
     {
-        "question": "Oppression by corporations is more of a concern than oppression by governments.",
+        "question": "I support regional unions, such as the European Union.",
         "effect": {
-            "econ": 10,
-            "dipl": 0,
-            "govt": -5,
-            "scty": 0
-        }
-    },
-    {
-        "question": "Oppression by corporations is more of a concern than oppression by governments.",
-        "effect": {
-            "econ": 0,
+            "econ": -5,
             "dipl": 10,
-            "govt": 0,
-            "scty": -5
+            "govt": 10,
+            "scty": 5
         }
     },
 ];
