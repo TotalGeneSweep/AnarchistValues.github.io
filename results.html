@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
 <script>
-  version = "Test Edition #4" //Remember to update this before making changes to the test itself!
+  version = "Test Edition #6" //Remember to update this before making changes to the test itself!
 </script>
 </head>
 <script type="application/javascript"
@@ -92,7 +92,7 @@ stats"></a></div></noscript>
     }
 
     techArray = ["Transhumanist","Futurist","Technological","Centrist","Agrarian","Primitive","Primal"]
-    diplArray = ["Egoist","Individualism","Selfish","Balanced","Selfless","Collectivist","Hive-Mind"]
+    socArray = ["Egoist","Individualism","Selfish","Balanced","Selfless","Collectivist","Hive-Mind"]
     govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
     sctyArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
 
@@ -119,7 +119,7 @@ stats"></a></div></noscript>
 
     setBarValue("protech", protech)
     setBarValue("antitech", antitech)
-    setBarValue("peace", collectivism)
+    setBarValue("collectivism", collectivism)
     setBarValue("individualism", individualism)
     setBarValue("liberty", liberty)
     setBarValue("authority", authority)
@@ -127,7 +127,7 @@ stats"></a></div></noscript>
     setBarValue("tradition", tradition)
 
     document.getElementById("tech-label").innerHTML = setLabel(protech, techArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(collectivism, diplArray)
+    document.getElementById("societal-label").innerHTML = setLabel(collectivism, socArray)
     document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
     document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
 
@@ -166,9 +166,9 @@ stats"></a></div></noscript>
         ctx.drawImage(img, 20, 170, 100, 100);
         img = document.getElementById("img-antitech")
         ctx.drawImage(img, 680, 170, 100, 100)
-        img = document.getElementById("img-might")
+        img = document.getElementById("img-individualism")
         ctx.drawImage(img, 20, 290, 100, 100)
-        img = document.getElementById("img-peace")
+        img = document.getElementById("img-collectivism")
         ctx.drawImage(img, 680, 290, 100, 100)
         img = document.getElementById("img-liberty")
         ctx.drawImage(img, 20, 410, 100, 100)
@@ -223,7 +223,7 @@ stats"></a></div></noscript>
 		ctx.fillText(version, 780, 90)
         ctx.textAlign="center"
         ctx.fillText("Technological Axis: " + document.getElementById("tech-label").innerHTML, 400, 175)
-        ctx.fillText("Diplomatic Axis: " + document.getElementById("diplomatic-label").innerHTML, 400, 295)
+        ctx.fillText("Diplomatic Axis: " + document.getElementById("societal-label").innerHTML, 400, 295)
         ctx.fillText("Civil Axis: " + document.getElementById("state-label").innerHTML, 400, 415)
         ctx.fillText("Societal Axis: " + document.getElementById("society-label").innerHTML, 400, 535)
 
