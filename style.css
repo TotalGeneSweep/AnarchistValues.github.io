@@ -255,13 +255,13 @@ div.individualism {
     text-align: left;
     border-right-style: solid;
 }
-div.progress {
-    background-color: #9c27b0;
+div.markets {
+    background-color: #F7941E;
     text-align: right;
     border-left-style: solid;
 }
-div.tradition {
-    background-color: #8bc34a;
+div.communism {
+    background-color: #FF0000;
     text-align: left;
     border-right-style: solid;
 }
