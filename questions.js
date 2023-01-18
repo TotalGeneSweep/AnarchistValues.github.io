@@ -8,4 +8,4 @@ questions = [
             "scty": 0
         }
     }
-   ]
+]
