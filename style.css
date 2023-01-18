@@ -225,13 +225,13 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.equality {
-    background-color: #f44336;
+div.protech {
+    background-color: #0000FE;
     text-align: left;
     border-right-style: solid;
 }
-div.wealth {
-    background-color: #00897b;
+div.antitech {
+    background-color: #018001;
     text-align: right;
     border-left-style: solid;
 }
