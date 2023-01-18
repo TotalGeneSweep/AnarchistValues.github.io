@@ -7,4 +7,5 @@ questions = [
             "govt": -5,
             "scty": 0
         }
-    },
+    }
+   ]
