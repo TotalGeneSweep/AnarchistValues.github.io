@@ -13,7 +13,7 @@ questions = [
         "effect": {
             "tech": 0
             "soc": 10,
-            "govt": 0,
+            "phil": 0,
             "econ": 0
         }
     },
