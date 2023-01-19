@@ -1,2 +1,2 @@
-# 8values.github.io
-The 8values Political Quiz measures individuals' political values, including Equality, Nation, Liberty, Tradition, Markets, World, Authority, and Progress.
+# AnarchistValues.github.io
+The AnarchistValues Political Quiz measures individuals' opinions on Technology, Societal Organization, Philosophy, and Economic System
