@@ -2,135 +2,135 @@ ideologies = [
     {
         "name": "Anarcho-Communism",
         "stats": {
-            "tech": 45,
-            "soc": 70,
-            "phil": 60,
-            "econ": 20
+            "econ": 45,
+            "dipl": 70,
+            "govt": 60,
+            "scty": 20
         }
     },
     {
         "name": "Ego-Communism",
         "stats": {
-            "tech": 45,
-            "soc": 25,
-            "phil": 50,
-            "econ": 20
+            "econ": 45,
+            "dipl": 25,
+            "govt": 50,
+            "scty": 20
         }
     },
     {
         "name": "Mutualism",
         "stats": {
-            "tech": 45,
-            "soc": 40,
-            "phil": 50,
-            "econ": 75
+            "econ": 45,
+            "dipl": 40,
+            "govt": 50,
+            "scty": 75
         }
     },
     {
         "name": "Post-Civ",
         "stats": {
-            "tech": 70,
-            "soc": 35,
-            "phil": 40,
-            "econ": 55
+            "econ": 70,
+            "dipl": 35,
+            "govt": 40,
+            "scty": 55
         }
     },
     {
         "name": "Anti-Civ",
         "stats": {
-            "tech": 25,
-            "soc": 40,
-            "phil": 50,
-            "econ": 75
+            "econ": 25,
+            "dipl": 40,
+            "govt": 50,
+            "scty": 75
         }
     },
     {
         "name": "Anarcho-Primitivism",
         "stats": {
-            "tech": 0,
-            "soc": 75,
-            "phil": 65,
-            "econ": 40
+            "econ": 0,
+            "dipl": 75,
+            "govt": 65,
+            "scty": 40
         }
     },
     {
         "name": "Market Anarchism",
         "stats": {
-            "tech": 60,
-            "soc": 45,
-            "phil": 55,
-            "econ": 90
+            "econ": 60,
+            "dipl": 45,
+            "govt": 55,
+            "scty": 90
         }
     },
     {
         "name": "Post-Left",
         "stats": {
-            "tech": 55,
-            "soc": 35,
-            "phil": 45,
-            "econ": 45
+            "econ": 55,
+            "dipl": 35,
+            "govt": 45,
+            "scty": 45
         }
     },
     {
         "name": "Anarcho-Collectivism",
         "stats": {
-            "tech": 55,
-            "soc": 75,
-            "phil": 45,
-            "econ": 20
+            "econ": 55,
+            "dipl": 75,
+            "govt": 45,
+            "scty": 20
         }
     },
     {
         "name": "Egoism",
         "stats": {
-            "tech": 45,
-            "soc": 0,
-            "phil": 65,
-            "econ": 55
+            "econ": 45,
+            "dipl": 0,
+            "govt": 65,
+            "scty": 55
         }
     },
     {
         "name": "Ego-Mutualism",
         "stats": {
-            "tech": 45,
-            "soc": 20,
-            "phil": 65,
-            "econ": 75
+            "econ": 45,
+            "dipl": 20,
+            "govt": 65,
+            "scty": 75
         }
     },
     {
         "name": "Anarcho-Nihilism",
         "stats": {
-            "tech": 65,
-            "soc": 75,
-            "phil": 20,
-            "econ": 45
+            "econ": 65,
+            "dipl": 75,
+            "govt": 20,
+            "scty": 45
         }
     },
     {
         "name": "Existentialist Anarchism",
         "stats": {
-            "tech": 45,
-            "soc": 35,
-            "phil": 80,
-            "econ": 55
+            "econ": 45,
+            "dipl": 35,
+            "govt": 80,
+            "scty": 55
         }
     },
     {
         "name": "Anarcho-Individualism",
         "stats": {
-            "tech": 45,
-            "soc": 20,
-            "phil": 45,
+            "econ": 45,
+            "dipl": 20,
+            "govt": 45,
             "econ": 65
         }
     },
     {
         "name": "Anarcho-Transhumanisn",
         "stats": {
-            "tech": 0,
-            "soc": 60,
-            "phil": 50,
+            "econ": 0,
+            "dipl": 60,
+            "govt": 50,
             "econ": 45
         }
     },
